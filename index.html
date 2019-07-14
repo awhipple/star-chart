@@ -1,6 +1,5 @@
 <html>
   <head>
-    <script src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
       #castbutton {
@@ -21,8 +20,8 @@
     </style>
   </head>
   <body>
-    Sender2
-    <google-cast-launcher id="castbutton"></google-cast-launcher>
+    Sender3
+    <div id="castbuttonn"></div>
     <script>
       $(function() {
         initializeCastApi = function() {
@@ -36,7 +35,14 @@
             initializeCastApi();
           }
         };
+        document
+          .getElementById("castbuttonn")
+          .appendChild(document.createElement("google-cast-launcher"));
       });
     </script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"
+    ></script>
   </body>
 </html>
