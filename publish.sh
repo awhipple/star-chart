@@ -1,7 +1,3 @@
-#!/bin/bash
-# upload a file 
-ftp -i ftpupload.net <<ENDOFCOMMANDS
-cd htdocs
-put "index.html" "index.html"
-quit
-ENDOFCOMMANDS
+PASSWORD=$1
+# ncftpput -R -u epiz_24202028 -p $PASSWORD ftpupload.net htdocs index.html
+ncftpput -R -u epiz_24202028 -p $PASSWORD ftpupload.net htdocs/r r/index.html
